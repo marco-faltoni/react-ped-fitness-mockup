@@ -254,13 +254,13 @@ export const MagazineProvider = props => {
         },
         {
             image: "https://images.pexels.com/photos/66990/pexels-photo-66990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            title: "Gli Eventi  di Dicembre e Gennaio",
+            title: "Gli Eventi di Dicembre e Gennaio",
             description: "Fusce neque. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Phasellus accumsan cursus velit. Ut non enim eleifend felis pretium feugiat. Vestibulum fringilla pede sit amet augue. Cras ultricies mi eu turpis hendrerit fringilla. In consectetuer turpis ut velit. Fusce a quam. Vivamus quis mi.",
             date: new Date().toLocaleDateString()
         },
         {
             image: "https://images.pexels.com/photos/66990/pexels-photo-66990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            title: "Gli Eventi  di Dicembre e Gennaio",
+            title: "Gli Eventi di Dicembre e Gennaio",
             description: "Fusce neque. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Phasellus accumsan cursus velit. Ut non enim eleifend felis pretium feugiat. Vestibulum fringilla pede sit amet augue. Cras ultricies mi eu turpis hendrerit fringilla. In consectetuer turpis ut velit. Fusce a quam. Vivamus quis mi.",
             date: new Date().toLocaleDateString()
         },

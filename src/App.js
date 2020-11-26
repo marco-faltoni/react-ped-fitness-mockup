@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import Context
+import {ActivityProvider, AlertProvider, MagazineProvider} from './dataContext';
+//Router
+import { Switch, Route, useLocation } from "react-router-dom";
+// import styles
+import "./style/app.scss";
+//Import Pages
+import Home from "./pages/Home";
+import Booking from "./pages/Booking";
+// import components
+import Nav from "./components/Nav";
 
 function App() {
-  return (
+
+  const location = useLocation();
+
+  return (    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Switch location={location} key={location.pathname}>
+        <Route path="/" exact>
+          <Home/>
+        </Route>
+      
+        <Route path="/booking" exact>
+          <ActivityProvider>
+            <Booking/>
+          </ActivityProvider>
+        </Route>
+      </Switch>
     </div>
   );
 }
