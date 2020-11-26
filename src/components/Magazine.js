@@ -4,7 +4,7 @@ import {MagazineContext} from '../dataContext';
 const Magazine = () => {
     const [magazines, setMagazines] = useContext(MagazineContext);
     return (
-        <div>
+        <div className='magazine'>
             {magazines.map(magazine => (
                 <h1> {magazine.title} </h1>
             ))}

@@ -266,10 +266,10 @@ export const MagazineProvider = props => {
         },
     ]);
 
-    return [
+    return (
         <MagazineContext.Provider value={[magazines, setMagzines]}>
             {props.children}
         </MagazineContext.Provider>
-    ];
+    );
 }
 

@@ -15,14 +15,14 @@ function App() {
 
   const location = useLocation();
 
-  return (    
+  return (
+    <>
+    <Nav />
     <div className="App">
-      <Nav />
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
           <Home/>
         </Route>
-      
         <Route path="/booking" exact>
           <ActivityProvider>
             <Booking/>
@@ -30,6 +30,7 @@ function App() {
         </Route>
       </Switch>
     </div>
+    </>
   );
 }
 

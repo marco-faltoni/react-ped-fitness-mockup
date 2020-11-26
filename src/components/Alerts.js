@@ -4,7 +4,7 @@ import {AlertContext} from '../dataContext';
 const Alerts = () => {
     const [alerts, setAlerts] = useContext(AlertContext);
     return (
-        <div>
+        <div className='alerts'>
             {alerts.map(alert => (
                 <h1> {alert.title} </h1>
             ))}
