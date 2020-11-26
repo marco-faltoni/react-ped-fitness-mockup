@@ -204,11 +204,13 @@ export const AlertProvider = props => {
         {
             title: "Chiusure straordinarie per vacanze di Natale",
             description: "Fusce neque. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Phasellus accumsan cursus velit. Ut non enim eleifend felis pretium feugiat. Vestibulum fringilla pede sit amet augue. Cras ultricies mi eu turpis hendrerit fringilla. In consectetuer turpis ut velit. Fusce a quam. Vivamus quis mi.",
+            date: new Date().toLocaleDateString(),
             read: false
         },
         {
             title: "Chiusure straordinarie per vacanze di Natale",
             description: "Fusce neque. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Phasellus accumsan cursus velit. Ut non enim eleifend felis pretium feugiat. Vestibulum fringilla pede sit amet augue. Cras ultricies mi eu turpis hendrerit fringilla. In consectetuer turpis ut velit. Fusce a quam. Vivamus quis mi.",
+            date: new Date().toLocaleDateString(),
             read: true
         },
     ]);
