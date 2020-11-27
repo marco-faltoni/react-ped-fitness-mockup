@@ -4,6 +4,7 @@ import React,{useState, createContext} from 'react';
 export const ActivityContext = createContext();
 export const AlertContext = createContext();
 export const MagazineContext = createContext();
+export const FilterContext = createContext();
 
 export const ActivityProvider = props => {
     const [activities, setActivities] = useState([
@@ -12,10 +13,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/863977/pexels-photo-863977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             duration: 30,
-            hours: [{start: "8:30", finish: "9:00"}],
+            hours: ["8:30", "9:00"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["Sei già iscritto", "iscritto"],
+            status: "Sei già iscritto",
+            btn: 'annulla',
+            btnclass: 'annulla',
             id: uuidv4(),
             category: "Cardiovascolari e Tonificazione",
             color: "#c94043",
@@ -26,10 +29,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/3823186/pexels-photo-3823186.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
             duration: 45,
-            hours: [{start: "9:00", finish: "9:45"}],
+            hours: ["9:00","9:45"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["Sei già iscritto", "iscritto"],
+            status: "Sei già iscritto",
+            btn: 'annulla',
+            btnclass: 'annulla',
             id: uuidv4(),
             category: "Cardiovascolari e Tonificazione",
             color: "#c94043",
@@ -40,10 +45,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/1638336/pexels-photo-1638336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             duration: 45,
-            hours: [{start: "8:30", finish: "9:15"}],
+            hours: ["8:30", "9:15"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["18/30 Posti disponibili", "iscriviti"],
+            status: "18/30 Posti disponibili",
+            btn: 'iscriviti',
+            btnclass: 'iscriviti',
             id: uuidv4(),
             category: "Danza",
             color: "#ab417f",
@@ -54,10 +61,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             duration: 50,
-            hours: [{start: "8:30", finish: "9:20"}],
+            hours: ["8:30", "9:20"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["18/30 Posti disponibili", "iscriviti"],
+            status: "18/30 Posti disponibili",
+            btn: 'iscriviti',
+            btnclass: 'iscriviti',
             id: uuidv4(),
             category: "Pumping",
             color: "#205950",
@@ -66,12 +75,14 @@ export const ActivityProvider = props => {
         {
             name: "Hatha Yoga",
             cover:
-                "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+                "https://images.pexels.com/photos/3823186/pexels-photo-3823186.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
             duration: 45,
-            hours: [{start: "9:00", finish: "9:45"}],
+            hours: ["9:00", "9:45"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["attività libera", ""],
+            status: "attività libera",
+            btn: 'none',
+            btnclass: 'none',
             id: uuidv4(),
             category: "Cardiovascolari e Tonificazione",
             color: "#c94043",
@@ -82,12 +93,14 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/4720236/pexels-photo-4720236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             duration: 45,
-            hours: [{start: "9:00", finish: "9:45"}],
+            hours: ["9:00", "9:45"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["03 persone in attesa", "mettiti in attesa"],
+            status: "03 persone in attesa",
+            btn:"mettiti in attesa",
+            btnclass: 'mettiti in attesa',
             id: uuidv4(),
-            category: "Cardiovascolari e Tonificazione",
+            category: "Crossfit",
             color: "#f8cfb6",
             active: true,
         },
@@ -96,10 +109,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/2091400/pexels-photo-2091400.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
             duration: 50,
-            hours: [{start: "8:30", finish: "9:20"}],
+            hours: ["8:30", "9:20"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["12 ore all'apertura", "none"],
+            status: "12 ore all'apertura",
+            btn: 'iscriviti',
+            btnclass: 'grey',
             id: uuidv4(),
             category: "Attività in acqua",
             color: "#2ab3bf",
@@ -108,12 +123,14 @@ export const ActivityProvider = props => {
         {
             name: "Hatha Yoga",
             cover:
-                "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+                "https://images.pexels.com/photos/3823186/pexels-photo-3823186.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
             duration: 45,
-            hours: [{start: "9:00", finish: "9:45"}],
+            hours: ["9:00", "9:45"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["Sei in lista di attesa 2 persone prima di te", "iscritto"],
+            status: "Sei in lista di attesa 2 persone prima di te",
+            btn: "annulla",
+            btnclass: 'annulla',
             id: uuidv4(),
             category: "Cardiovascolari e Tonificazione",
             color: "#c94043",
@@ -124,10 +141,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/3823186/pexels-photo-3823186.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
             duration: 45,
-            hours: [{start: "9:00", finish: "9:45"}],
+            hours: ["9:00", "9:45"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["Sei già iscritto", "iscritto"],
+            status: "Sei già iscritto",
+            btn:  "annulla",
+            btnclass: 'annulla',
             id: uuidv4(),
             category: "Cardiovascolari e Tonificazione",
             color: "#c94043",
@@ -138,10 +157,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/1638336/pexels-photo-1638336.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             duration: 45,
-            hours: [{start: "8:30", finish: "9:15"}],
+            hours: ["8:30", "9:15"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["18/30 Posti disponibili", "iscriviti"],
+            status: "18/30 Posti disponibili",
+            btn: "iscriviti",
+            btnclass: 'iscriviti',
             id: uuidv4(),
             category: "Danza",
             color: "#ab417f",
@@ -152,10 +173,12 @@ export const ActivityProvider = props => {
             cover:
                 "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             duration: 50,
-            hours: [{start: "8:30", finish: "9:20"}],
+            hours: ["8:30", "9:20"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["02/30 Posti disponibili", "iscriviti"],
+            status: "02/30 Posti disponibili",
+            btn: "iscriviti",
+            btnclass: 'iscriviti',
             id: uuidv4(),
             category: "Pumping",
             color: "#205950",
@@ -164,12 +187,14 @@ export const ActivityProvider = props => {
         {
             name: "Hatha Yoga",
             cover:
-                "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+                "https://images.pexels.com/photos/3823186/pexels-photo-3823186.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
             duration: 45,
-            hours: [{start: "9:00", finish: "9:45"}],
+            hours: ["9:00", "9:45"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["attività libera", ""],
+            status: "attività libera",
+            btn: 'none',
+            btnclass: 'none',
             id: uuidv4(),
             category: "Cardiovascolari e Tonificazione",
             color: "#c94043",
@@ -179,11 +204,13 @@ export const ActivityProvider = props => {
             name: "Play Acqua",
             cover:
                 "https://images.pexels.com/photos/2091400/pexels-photo-2091400.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-            duration: 50,
-            hours: [{start: "8:30", finish: "9:20"}],
+            duration: 60,
+            hours: ["8:30", "9:30"],
             room: "Conscious",
             place: "Club Ravizza",
-            status: ["12 ore all'apertura", "none"],
+            status: "12 ore all'apertura",
+            btn: 'iscriviti',
+            btnclass: 'grey',
             id: uuidv4(),
             category: "Attività in acqua",
             color: "#2ab3bf",
@@ -272,6 +299,16 @@ export const MagazineProvider = props => {
         <MagazineContext.Provider value={[magazines, setMagzines]}>
             {props.children}
         </MagazineContext.Provider>
+    );
+}
+
+export const FilterProvider = props => {
+    const [filtered, setFiltered] = useState([]);
+
+    return (
+        <FilterContext.Provider value={[filtered, setFiltered]}>
+            {props.children}
+        </FilterContext.Provider>
     );
 }
 

@@ -1,0 +1,185 @@
+.container-booking {
+
+    .bg3 {
+        background-image: url('../img/bg3.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 12vh;
+        .calendar {
+            width: 100%;
+            height: 100%;
+            .wrapper-calendar {
+                max-width: 1200px;
+                height: 100%;
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                svg {
+                    color: #D4DF5D;
+                }
+                .dates {
+                    display: flex;
+                    justify-content: center;
+                    section:first-child{
+                        background-color: #D4DF5D;
+                        color: #013066;
+                    }
+                    section {
+                        color: whitesmoke;
+                        padding: 0.5rem 2.5rem;
+                        p {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bg4 {
+        background-image: url('../img/bg4.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 10vh;
+        .filters {
+            max-width: 1200px;
+            margin: auto;
+            margin-bottom: 4rem;
+            height: 100%;
+            .selects {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                select {
+                    position: relative;
+                    border: none;
+                    border-bottom: 1px solid #013066;
+                    background: none;
+                    padding: 1rem;
+                    margin-left: 2rem;
+                    color: #013066;
+                    option:after {
+                        content: " ";
+                        height: 5px;
+                        width: 5px;
+                        border-radius: 5px;
+                        display: inline-block;
+                    }
+                    
+                    option.Cardiovascolari:after { background: #c94043; }
+                    option.Danza:after { background: #ab417f; }
+                    option.Pumping:after { background: #205950; }
+                    option.Crossfit:after { background: #f8cfb6; }
+                    option.Attività:after { background: #2ab3bf; }
+                }
+            }
+        }
+    }
+
+
+    .wrapper {
+        max-width: 1200px;
+        min-height: 80vh;
+        margin: auto;
+        .card {
+            width: 100%;
+            height: 15vh;
+            background-color: white;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            display: flex;
+            margin-top: 2rem;
+            .img-color {
+                width: 250px;
+                display: flex;
+                .color {
+                    height: 100%;
+                    width: 5px;
+                    margin: 0;
+                }
+                img {
+                    width: 95%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            
+            .text {
+                width: 78%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                h3 {
+                    width: 25%;
+                }
+                .one {
+                    display: flex;
+                    align-items: center;
+                    width: 20%;
+                    p {
+                        margin-right: 2rem;
+                        font-size: 0.8rem;
+                    }
+                    h3 {
+                        font-size: 1rem;
+                        span {
+                            margin-left: 1rem;
+                        }
+                    }
+                    
+                }
+                .two {
+                    width: 11%;
+                    font-size: 0.8rem;
+                }
+                button {
+                    width: 20%;
+                }
+
+                button.iscriviti {
+                    border: none;
+                    background-color: #D4DF5D;
+                    padding: 1rem 2rem;
+                    color: #013066;
+                    text-transform: uppercase;
+                }
+                button.annulla {
+                    border: 2px solid peru;
+                    background: none;
+                    padding: 1rem 2rem;
+                    color: #013066;
+                    text-transform: uppercase;
+                }
+                button.mettiti {
+                    border: 2px solid #013066;
+                    background: none;
+                    padding: 1rem 2rem;
+                    color: #013066;
+                    text-transform: uppercase;
+                }
+                button.grey {
+                    border: none;
+                    background-color: rgb(201, 201, 201);
+                    padding: 1rem 2rem;
+                    color: grey;
+                    text-transform: uppercase;
+                }
+                button.none {
+                    visibility: hidden;
+                }
+            }
+        }
+        .card:last-child{
+            margin-bottom: 6rem;
+        }
+    }
+    .footer {
+        .wrapper{
+            min-height: 3vh;
+        }
+        margin-bottom: 2rem;
+    }
+}

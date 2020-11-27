@@ -1,6 +1,6 @@
 import React from 'react';
 // import Context
-import {ActivityProvider, AlertProvider, MagazineProvider} from './dataContext';
+import {ActivityProvider} from './dataContext';
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
 // import styles
