@@ -1,14 +1,65 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import {MagazineContext} from '../dataContext';
+// import slider
+import {Swiper, SwiperSlide} from 'swiper/react';
+import SwiperCore from 'swiper';
+import 'swiper/swiper-bundle.css';
+// import style
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Magazine = () => {
     const [magazines, setMagazines] = useContext(MagazineContext);
+    const [Mobile, setMobile] = useState(false);
+    const slides = [];
+
+    let isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
+
+    useEffect(()=> {
+        if (isMobile) {
+            setMobile(true)
+        }
+    },[]);
+
+    for (let i = 0; i < magazines.length; i++) {
+        slides.push (
+            <SwiperSlide key={`slide-${i}`} className="magazine">
+                <div className="wrap-magazine">
+                    <img src={magazines[i].image} alt={magazines[i].title}/>
+                    <div className="text">
+                        <h3> {magazines[i].title} </h3>
+                        <div className="parag">
+                            <h4> {magazines[i].description} </h4>
+                        </div>
+                        <p> {magazines[i].date} </p>
+                    </div>
+                </div>
+            </SwiperSlide>
+        )
+    }
+
     return (
-        <div className='magazine'>
-            {magazines.map(magazine => (
-                <h1> {magazine.title} </h1>
-            ))}
-        </div>
+        <>
+        
+        {!Mobile && (
+            <React.Fragment>
+                <Swiper spaceBetween={80} slidesPerView={4} id='main' className='magazines'>
+                    <h3 className='magazine-title' ><FontAwesomeIcon icon={faCircle}/> Magazine<span>Mostra Tutti</span></h3>
+                    {slides}
+                </Swiper>
+            </React.Fragment>
+        )}
+
+        {Mobile && (
+            <React.Fragment>
+                <Swiper spaceBetween={80} slidesPerView={2} id='main' className='magazines'>
+                    <h3 className='magazine-title' ><FontAwesomeIcon icon={faCircle}/> Magazine<span>Mostra Tutti</span></h3>
+                    {slides}
+                </Swiper>
+            </React.Fragment>
+        )}
+        
+        </>
     );
 };
 

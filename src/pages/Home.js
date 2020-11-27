@@ -1,8 +1,9 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 // import Context
 import {ActivityProvider, AlertProvider, MagazineProvider} from '../dataContext';
 // img
 import bg from "../img/bg.png";
+import bg2 from "../img/bg2.png";
 //Page Components
 import Attività from "../components/Attività";
 import Alerts from "../components/Alerts";
@@ -17,23 +18,43 @@ const Home = () => {
             img: ''
         },
     ]);
+
+    const [Mobile, setMobile] = useState(false);
+
+    let isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
+
+    useEffect(()=> {
+        if (isMobile) {
+            setMobile(true)
+        }
+    },[]);
     
     return (
         <div className='container-home'>
             <div className='bg'>
-                <img src={bg} alt="background"/>
+                {!Mobile && (
+                    <img src={bg} alt="background"/>
+                )}
+                {Mobile && (
+                    <img src={bg2} alt="background"/>
+                )}
             </div>   
             <ActivityProvider>
                 <Attività />
             </ActivityProvider>
-
-            <Ads1 />
+            
+            {!Mobile && (
+                <Ads1 />
+            )}
+            
 
             <AlertProvider>
                 <Alerts />
             </AlertProvider>
 
-            <Ads2 />
+            {!Mobile && (
+                <Ads2 />
+            )}
 
             <MagazineProvider>
                 <Magazine />
