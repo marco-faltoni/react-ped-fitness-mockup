@@ -15,6 +15,7 @@ import CardMobile from "../components/CardMobile";
 import Footer from "../components/Footer";
 //Animations
 import { motion } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 import { pageAnimation } from "../animation";
 
 
@@ -67,11 +68,13 @@ const Booking = () => {
                     <div className="bg4">
 
                     <ActivityProvider>
-                        <FilterProvider>
-                            <FiltriMobile />
-                            <CardMobile />
-                            <Footer />
-                        </FilterProvider>
+                        <AnimateSharedLayout>
+                            <FilterProvider>
+                                <FiltriMobile />
+                                <CardMobile />
+                                <Footer />
+                            </FilterProvider>
+                        </AnimateSharedLayout>
                     </ActivityProvider>
                     </div>
                 </>

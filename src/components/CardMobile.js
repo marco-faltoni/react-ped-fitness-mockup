@@ -3,6 +3,7 @@ import {ActivityContext, FilterContext} from '../dataContext';
 // styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {motion} from "framer-motion"
 
 const Card = () => {
     const [activities, setActivities] = useContext(ActivityContext);
@@ -13,9 +14,9 @@ const Card = () => {
     // }, [activities]);
 
     return (
-        <div className='wrapper-mobile'>
+        <motion.div layout className='wrapper-mobile'>
             {filtered.map((filter)=> (
-                    <div className="card" key={filter.id}>
+                    <motion.div layout className="card" key={filter.id}>
                         <div className='color' style={{backgroundColor: filter.color }}></div>
                         <div className="text">
                             <section className='one' >
@@ -39,9 +40,9 @@ const Card = () => {
                                 </button>
                             </section>
                         </div>
-                    </div>
+                    </motion.div>
             ))}
-        </div>
+        </motion.div>
     );
 };
 

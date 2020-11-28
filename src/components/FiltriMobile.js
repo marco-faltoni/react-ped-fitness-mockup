@@ -3,7 +3,8 @@ import {ActivityContext, FilterContext} from '../dataContext';
 // styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
-
+// anim
+import {motion} from "framer-motion";
 
 const Filtri = () => {
     // context and state
@@ -66,16 +67,16 @@ const Filtri = () => {
     });
 
     return (
-        <div className='filters-mobile'>
-            <div className="text">
+        <motion.div layout className='filters-mobile'>
+            <motion.div layout className="text" onClick={toggleHandler}>
                 <FontAwesomeIcon 
                     icon={faSlidersH} 
                 />
-                <h3 onClick={toggleHandler}>Filtri</h3>
-            </div>
+                <h3 >Filtri</h3>
+            </motion.div>
             
             {toggle && (
-                <div className="selects">
+                <motion.div layout className="selects">
                     <select name="" id="">
                         <option value={activities[0].place}>{activities[0].place}</option>
                     </select>
@@ -91,9 +92,9 @@ const Filtri = () => {
                     <select name="" id="">
                         <option value="All">Tutte le attività</option>
                     </select>
-                </div>
+                </motion.div>
             )}
-        </div>
+        </motion.div>
     );
 };
 
