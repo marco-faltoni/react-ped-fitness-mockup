@@ -39,16 +39,10 @@ const Nav = () => {
                 </motion.div>
                 </li>
                 <li>
-                <Link to="/alerts">
                     <FontAwesomeIcon 
                         icon={faBell}
                         className= {pathname === "/alerts" ? "active" : ""}
                     />
-                </Link>
-                <motion.div className="line" transition={{ duration: 0.75 }}
-                    initial={{ width: "0%" }}
-                    animate={{ width: pathname === "/alerts" ? "30%" : "0%" }}>
-                </motion.div>
                 </li>
             </ul>
             <div className="account">

@@ -13,6 +13,9 @@ import FiltriMobile from "../components/FiltriMobile";
 import Card from "../components/Card";
 import CardMobile from "../components/CardMobile";
 import Footer from "../components/Footer";
+//Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 
 const Booking = () => {
@@ -31,7 +34,13 @@ const Booking = () => {
 
 
     return (
-        <div className='container-booking'>
+        <motion.div
+            variants={pageAnimation} 
+            exit="exit"
+            initial="hidden"
+            animate="show"
+            className='container-booking'
+        >
 
             {!isMobile && (
                 <>   
@@ -75,7 +84,7 @@ const Booking = () => {
             {/* </ActivityProvider> */}
 
             {/* <Footer /> */}
-        </div>
+        </motion.div>
     );
 };
 

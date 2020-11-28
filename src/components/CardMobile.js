@@ -38,8 +38,6 @@ const Card = () => {
                                     {filter.btn}
                                 </button>
                             </section>
-                            
-                            
                         </div>
                     </div>
             ))}

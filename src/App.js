@@ -10,6 +10,8 @@ import Home from "./pages/Home";
 import Booking from "./pages/Booking";
 // import components
 import Nav from "./components/Nav";
+//Animation
+import { AnimatePresence } from "framer-motion";
 
 function App() {
 
@@ -19,16 +21,18 @@ function App() {
     <>
     <Nav />
     <div className="App">
-      <Switch location={location} key={location.pathname}>
-        <Route path="/" exact>
-          <Home/>
-        </Route>
-        <Route path="/booking" exact>
-          <ActivityProvider>
-            <Booking/>
-          </ActivityProvider>
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+          <Route path="/booking" exact>
+            <ActivityProvider>
+              <Booking/>
+            </ActivityProvider>
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
     </>
   );

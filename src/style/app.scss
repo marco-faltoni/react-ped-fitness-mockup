@@ -57,6 +57,15 @@ body {
     li {
         padding-left: 5rem;
         position: relative;
+        .svg-inline--fa {
+            width: 1.4em;
+            height: 1.4em;
+            z-index: 2;
+            color: rgb(150, 150, 150);
+            path {
+                z-index: 5;
+            }
+        }
         a {
             color: rgb(150, 150, 150);
             text-decoration: none;

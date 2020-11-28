@@ -11,6 +11,9 @@ import Ads1 from "../components/Ads1";
 import Ads2 from "../components/Ads2";
 import Magazine from "../components/Magazine";
 import Footer from "../components/Footer";
+//Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const Home = () => {
     const [ads1, setAds1] = useState([
@@ -30,7 +33,12 @@ const Home = () => {
     },[]);
     
     return (
-        <div className='container-home'>
+        <motion.div 
+            variants={pageAnimation} 
+            exit="exit"
+            initial="hidden"
+            animate="show" className='container-home'
+        >
             <div className='bg'>
                 {!Mobile && (
                     <img src={bg} alt="background"/>
@@ -61,7 +69,7 @@ const Home = () => {
             </MagazineProvider>
 
             <Footer />
-        </div>
+        </motion.div>
     );
 };
 
