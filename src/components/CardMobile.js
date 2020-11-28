@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import {ActivityContext, FilterContext} from '../dataContext';
 // styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +15,6 @@ const Card = () => {
     return (
         <div className='wrapper-mobile'>
             {filtered.map((filter)=> (
-                <>
                     <div className="card" key={filter.id}>
                         <div className='color' style={{backgroundColor: filter.color }}></div>
                         <div className="text">
@@ -43,7 +42,6 @@ const Card = () => {
                             
                         </div>
                     </div>
-                </>
             ))}
         </div>
     );

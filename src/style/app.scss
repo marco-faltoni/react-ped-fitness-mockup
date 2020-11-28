@@ -60,10 +60,27 @@ body {
         a {
             color: rgb(150, 150, 150);
             text-decoration: none;
+            z-index: 2;
             .svg-inline--fa {
                 width: 1.4em;
                 height: 1.4em;
+                z-index: 2;
+                path {
+                    z-index: 5;
+                }
             }
+            .svg-inline--fa.active {
+                color: #013066;
+            }
+        }
+        .line {
+            height: 0.7rem;
+            background: #D4DF5D;
+            width: 0%;
+            position: absolute;
+            bottom: -60%;
+            left: 75%;
+            z-index: 1;
         }
     }
     .account {
@@ -108,8 +125,8 @@ body {
                 color: rgb(150, 150, 150);
                 text-decoration: none;
                 .svg-inline--fa {
-                    width: 1.2em;
-                    height: 1.2em;
+                    width: 1.3em;
+                    height: 1.3em;
                 }
             }
         }

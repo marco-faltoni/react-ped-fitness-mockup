@@ -6,7 +6,7 @@ import bg from "../img/bg.png";
 import bg2 from "../img/bg2.png";
 //Page Components
 import Attività from "../components/Attività";
-import Alerts from "../components/Alerts";
+import AlertsSection from "../components/AlertsSection";
 import Ads1 from "../components/Ads1";
 import Ads2 from "../components/Ads2";
 import Magazine from "../components/Magazine";
@@ -49,7 +49,7 @@ const Home = () => {
             
 
             <AlertProvider>
-                <Alerts />
+                <AlertsSection />
             </AlertProvider>
 
             {!Mobile && (

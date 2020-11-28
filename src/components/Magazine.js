@@ -2,11 +2,13 @@ import React, {useState, useContext, useEffect} from "react";
 import {MagazineContext} from '../dataContext';
 // import slider
 import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore from 'swiper';
+import SwiperCore, {Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 // import style
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
+
+SwiperCore.use(Pagination);
 
 const Magazine = () => {
     const [magazines, setMagazines] = useContext(MagazineContext);
@@ -43,7 +45,7 @@ const Magazine = () => {
         
         {!Mobile && (
             <React.Fragment>
-                <Swiper spaceBetween={80} slidesPerView={4} id='main' className='magazines'>
+                <Swiper spaceBetween={30} slidesPerView={4} id='main' className='magazines' pagination>
                     <h3 className='magazine-title' ><FontAwesomeIcon icon={faCircle}/> Magazine<span>Mostra Tutti</span></h3>
                     {slides}
                 </Swiper>
@@ -52,7 +54,7 @@ const Magazine = () => {
 
         {Mobile && (
             <React.Fragment>
-                <Swiper spaceBetween={80} slidesPerView={2} id='main' className='magazines'>
+                <Swiper spaceBetween={10} slidesPerView={2} id='main' className='magazines' pagination>
                     <h3 className='magazine-title' ><FontAwesomeIcon icon={faCircle}/> Magazine<span>Mostra Tutti</span></h3>
                     {slides}
                 </Swiper>

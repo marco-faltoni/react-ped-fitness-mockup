@@ -1,8 +1,5 @@
 import React, {useState, useContext, useEffect} from "react";
 import {ActivityContext, FilterContext} from '../dataContext';
-// styles
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 
 const Filtri = () => {
@@ -69,11 +66,11 @@ const Filtri = () => {
                 </select>
 
                 <select onChange={statusHandler}>
-                    <option value="All">Tutte le categorie</option>
+                    <option key='01' value="All">Tutte le categorie</option>
                     {categories.map((category, index)=> (
-                        <>
-                        <option className={category} value={category} id={index}>{category}</option>
-                        </>
+                        
+                        <option key={index + 1} className={category} value={category} id={index}>{category}</option>
+                        
                     ))}
                 </select>
                 <select name="" id="">

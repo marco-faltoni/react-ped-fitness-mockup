@@ -15,7 +15,7 @@ const Card = () => {
     return (
         <div className='wrapper'>
             {filtered.map((filter)=> (
-                <>
+
                     <div className="card" key={filter.id}>
                         <div className='img-color'>
                             <div className='color' style={{backgroundColor: filter.color }}></div>
@@ -41,7 +41,7 @@ const Card = () => {
                             />
                         </div>
                     </div>
-                </>
+                
             ))}
         </div>
     );

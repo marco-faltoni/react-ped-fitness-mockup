@@ -43,7 +43,7 @@ const Calendario = () => {
                 />
                 <div className="dates">
                     {dates.map((date)=> (
-                        <section>
+                        <section key={date.date}>
                             <p>{date.name}</p>
                             <h3>{date.date}</h3>
                             <p>{date.month}</p>

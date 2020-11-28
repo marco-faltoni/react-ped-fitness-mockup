@@ -1,5 +1,5 @@
 import React from "react";
-// import routting
+// import routing
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 // styles
@@ -18,37 +18,37 @@ const Nav = () => {
                 <Link to="/">
                     <FontAwesomeIcon 
                         icon={faHouseUser} 
+                        className= {pathname === "/" ? "active" : ""}
                     />
                 </Link>
-                {/* <Line
-                    transition={{ duration: 0.75 }}
+                <motion.div className="line" transition={{ duration: 0.75 }}
                     initial={{ width: "0%" }}
-                    animate={{ width: pathname === "/" ? "50%" : "0%" }}
-                /> */}
+                    animate={{ width: pathname === "/" ? "30%" : "0%", zIndex: 1 }}>
+                </motion.div>
                 </li>
                 <li>
                 <Link to="/booking">
                     <FontAwesomeIcon 
                         icon={faCalendarAlt}
+                        className= {pathname === "/booking" ? "active" : ""}
                     />
                 </Link>
-                {/* <Line
-                    transition={{ duration: 0.75 }}
+                <motion.div className="line" transition={{ duration: 0.75 }}
                     initial={{ width: "0%" }}
-                    animate={{ width: pathname === "/work" ? "50%" : "0%" }}
-                /> */}
+                    animate={{ width: pathname === "/booking" ? "30%" : "0%" }}>
+                </motion.div>
                 </li>
                 <li>
                 <Link to="/alerts">
                     <FontAwesomeIcon 
                         icon={faBell}
+                        className= {pathname === "/alerts" ? "active" : ""}
                     />
                 </Link>
-                {/* <Line
-                    transition={{ duration: 0.75 }}
+                <motion.div className="line" transition={{ duration: 0.75 }}
                     initial={{ width: "0%" }}
-                    animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
-                /> */}
+                    animate={{ width: pathname === "/alerts" ? "30%" : "0%" }}>
+                </motion.div>
                 </li>
             </ul>
             <div className="account">
