@@ -9,8 +9,11 @@ Perché Context e non Redux; per un mockup e per visualizzare informazioni che n
 ## Mobile View
 <h4> Ottimizzato usando come standard la width di iPhone X/XS/11/12 (375)</h4>
 
+## Uso delle animazioni
+<h4>Ho usato un framework React (Framer Motion) per animare alcuni piccoli dettaglie e la transizione delle pagine</h4>
 
 
+##
 <h4>Getting Started with Create React App</h4>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
